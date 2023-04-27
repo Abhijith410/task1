@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '/login.css' %}">
+</head>
+<body>
+    <div class="login"><br>
+        <a href="{% url 'task1:homepage' %}" class="home">Home Page</a>
+        <div class="login2">
+            <form action="" method="post" class="form1">
+                {% csrf_token %}
+                <div class="heading1">
+                  <h1><u>Login</u></h1>
+                  <br>
+                </div>
+                <br><br>
+                <div class="sign-group" id="cuser" >
+                    <label for="">Username</label>
+                    <input type="text" class="form-control sign" name="logusername" id="username" >
+                    <span class="" id="usererror"></span>
+                </div>
+                <div class="sign-group" id="cpass">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control sign" name="loguserpass" id="password" >
+                    <span id="passerror"></span>
+                </div>
+                <div class="sign-group" id="cbutton">
+                    <button onclick="return Logvalidate()" type="submit" class="btn btn-block signin">Sign In</button>
+                </div>
+                <p style="text-align: center; color: red;">{{fail}}</p>
+                <div class="join">
+                    <h4>Not a member? <a href="{% url 'task1:signup' %}">Join now</a></h4>
+                </div>
+                <br>
+            </form>
+        </div>    
+        <br><br>
+    </div>
+    
+    <script>
+        var username_error = document.getElementById('usererror');
+        var password_error = document.getElementById('passerror');
+        function Logvalidate(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            login1 = 0;
+            login2 = 0;
+
+            if (username === ""){
+                document.getElementById('username').style.borderColor = "red";
+                username_error.innerHTML = "Please enter your username";
+                login1 = 0;
+            }
+            else{
+                    login1 = 1;
+            } 
+
+            if (password === ""){
+                document.getElementById('password').style.borderColor = "red";
+                password_error.innerHTML = "Please enter your password";
+                login2 = 0;
+            }
+            else{
+                    login2 = 1;
+            } 
+
+            if(login1 === 1 && login2 == 1){
+                return true;  
+            }
+            else{
+                return false;
+            }
+ 
+        }
+    </script>
+</body>
+</html>

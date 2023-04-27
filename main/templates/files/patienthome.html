@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home</title>
+    <link rel="stylesheet" href="{% static '/patient.css' %}">
+</head>
+<body>
+    {% for p in p_data %}
+    <h3><u>Patient's Dashboard</u></h3>
+    <div>
+        <h1><u>Welcome {{p.firstname}} {{p.lastname}}</u></h1><br>
+        <img src="{{p.image.url}}" alt="" height="200px" width="200px">
+        <h3>E-mail: {{p.email}}</h3><br>
+        <h3>Address: {{p.address}}</h3><br>
+        <h3>Username: {{p.username}}</h3><br>
+        <h3>Password: {{p.password}}</h3><br><br>   
+        <a href="{% url 'task1:logout' %}"><button>Logout</button></a>
+    </div>
+    {% endfor %}
+</body>
+</html>

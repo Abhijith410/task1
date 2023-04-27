@@ -1,0 +1,91 @@
+
+  .login .home{
+    margin: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #9a057c;
+  }
+  
+  .login2{
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .login2 .form1{
+    background-color: #fff;
+    display: grid;
+    grid-row-gap: 10px;
+    justify-content: center;
+    background-color: #5691ff;
+  }
+  
+  .login2 .heading1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .login2 .heading1 .sign-group{
+    align-items: center;
+  }
+
+  .login2 .sign{
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .login2 .checkbox{
+    margin-left: 10px;
+  }
+  .login2 .signin{
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #00f024;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .login2 .signin:hover{
+    background-color: darkgray;
+  }
+  .login2 .join{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .login2 .join a{
+    text-decoration: none;
+    color: darkmagenta;
+  }
+
+  .login2 .join a:hover{
+    color: rgb(239, 0, 0);
+  }
+  
+  .body{
+    background-color: lemonchiffon;
+  }  
+
+  .sign-group label{
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
+
+  .sign-group input,textarea{
+    justify-content: center;
+    display: grid;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    border: 2px solid black;
+  }
+
+  span{
+    color: red;
+  }

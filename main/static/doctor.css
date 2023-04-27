@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+}
+div.main{
+    padding: 20px 100px;
+}
+div.sidebar{
+    height: 400px;
+    width: 200px;
+    border: 1px solid;
+    position: fixed;
+    padding: 50px;
+    background-color: aquamarine;
+}
+a:link{
+    text-decoration: none;
+}
+div.menu{
+    position: fixed;
+    margin-left: 300px;
+    height: 500px;
+    width: 800px;
+    border: 1px solid;
+    background-color: burlywood;
+}
+.main .menu h3{
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+}

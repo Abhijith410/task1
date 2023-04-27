@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static '/signup.css' %}">
+</head>
+<body>
+    <div class="signup">
+        <br> 
+        <a href="{% url 'task1:homepage' %}" class="home">Home Page</a>
+        <div class="signup2">
+            <form action="" method="post" class="form1" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="heading1">
+                  <h1><u><b>Sign Up</b></u></h1>
+                  <br>
+                </div>
+                <div>
+                    <select name="options" id="">
+                        <option value="default">--Choose User Type--</option>
+                        <option value="Patient">Patient</option>
+                        <option value="Doctor">Doctor</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="sign-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="regfname" class="form-control sign" id="FName">
+                    <span class="error" id="fnamerror"></span><br>
+                </div>
+                <div class="sign-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="reglname" class="form-control sign" id="LName">
+                    <span class="error" id="lnamerror"></span>
+                </div>
+                <div class="sign-group">
+                    <label for="">Email</label>
+                    <input type="text" name="regmail" class="form-control sign" id="email">
+                    <span class="error" id="emailerror_"></span><br>
+                </div>
+                <div class="sign-group">
+                    <label for="">Address</label>
+                    <textarea name="regaddress" id="address" class="form-control sign" cols="30" rows="3"></textarea>
+                    <span class="error" id="addresserror_"></span><br>
+                </div>
+                <div class="sign-group">
+                    <label for="">Username</label>
+                    <input type="text" name="regusername" class="form-control sign" id="user_name">
+                    <span class="error" id="usererror_"></span><br>
+                </div>
+                <div class="sign-group">
+                    <label for="">Password</label>
+                    <input type="password" name="regpass" class="form-control sign" id="pass_word" minlength="8" onkeyup='check();'>*Minimum 8 characters - Uppercase,Lowercase,Numbers,Special Characters <br>
+                    <span class="error" id="passerror_"></span><br>
+                </div>
+                <div class="sign-group">
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="regconfpass" class="form-control sign" id="r_password" onkeyup='check();'>
+                    <span class="error" id="conferror"></span><br>
+                    <span id='message'></span>
+                </div>
+                <div class="sign-group">
+                    <label for="">Choose Profile Picture</label><br>
+                    <input type="file" name="regimage" class="form-control sign" id="profilepicture">
+                    <span class="error" id=""></span>
+                <div class="sign-group" id="cbutton">
+                    <br><button onclick="return RegValidate()" type="submit" class="btn btn-block signin">Sign In</button>
+                    <p style="text-align: center; color: rgba(3, 11, 235, 0.865);">{{msg}}</p>
+                </div>
+                <br>
+                <div class="join">
+                    <h4>Already a member? <a href="{% url 'task1:login' %}">Login now</a></h4>
+                </div>
+            </form>
+        </div>    
+        <br><br>
+    </div>  
+
+    <script src="{% static '/sign.js' %}"></script>
+</body>
+</html>

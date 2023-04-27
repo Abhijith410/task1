@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Home</title>
+    <link rel="stylesheet" href="{% static '/doctor.css' %}">
+</head>
+<body>
+    {% for doc in doc_data %}
+    <h3><u>Doctor's Dashboard</u></h3>
+    <h1>Hello Dr {{doc.firstname}} {{doc.lastname}}</h1>
+    <div class="container-fluid main">
+        <div class="col-sm-3 sidebar">
+            <img src="{{doc.image.url}}" alt="" height="200px" width="200px"><br><br>
+            <a href="">Appointments</a><br><br>
+            <a href="{% url 'task1:logout' %}">Logout</a>
+        </div>
+        <div class="col-sm-7 menu">
+            <h3>E-mail: {{doc.email}}</h3>
+            <h3>Address: {{doc.address}}</h3>
+            <h3>Username: {{doc.username}}</h3>
+            <h3>Password: {{doc.password}}</h3>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

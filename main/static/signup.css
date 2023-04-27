@@ -1,0 +1,101 @@
+
+.signup .home{
+  margin: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #e72214;
+}
+
+  .signup2{
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .signup2 .form1{
+    background-color: #fff;
+    display: grid;
+    grid-row-gap: 10px;
+    justify-content: center;
+    background-color: blanchedalmond;
+  }
+  
+  .signup2 .heading1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .signup2 .heading1 .sign-group{
+    align-items: center;
+  }
+
+  .signup2 .sign{
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid black;
+  }
+  
+  .signup2 .checkbox{
+    margin-left: 10px;
+  }
+  .signup2 .signin{
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #e72214;
+    border: none;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .signup2 .signin:hover{
+    background-color: cadetblue;
+  }
+
+  .signup2 .join{
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+
+  .signup2 .join a{
+    text-decoration: none;
+    color: darkmagenta;
+  }
+
+  .signup2 .join a:hover{
+    color: rgb(239, 0, 0);
+  }
+
+  .signup2 select{
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    border: 2px solid;
+  }
+  
+  .body{
+    background-color: lemonchiffon;
+  }  
+
+  .sign-group label{
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
+
+  .sign-group input,textarea{
+    justify-content: center;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  span{
+    color: #e72214;
+  }

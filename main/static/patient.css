@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+    margin: 50px;
+}
+div{
+    background-color: rgb(148, 206, 94);
+    border: 2px solid;
+    padding: 30px;
+}
+a{
+    text-decoration: none;
+    color: bisque;
+    
+}
+
+a:hover{
+    color: black;
+}
+
+button{
+    background-color: brown;
+    color: white;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: blanchedalmond;
+    color: black;
+}
+
