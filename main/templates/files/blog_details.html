@@ -1,0 +1,14 @@
+{% extends 'files/doctor.html' %}
+{% block content %}
+<div class="blogdetails">
+    <a href="{% url 'task1:dblog' %}"><i class="fa-solid fa-backward"></i> Back to Blogs</a><br>
+    {% for blogs in blog %}
+    <h2>{{blogs.title}}</h2>
+    <img src="/media/{{blogs.blogimage}}" alt="" height="250px" width="250px"><br>
+    <h4>Category: {{blogs.category}}</h4>
+    <h5>{{blogs.summary}}</h5>
+    <h5>{{blogs.content}}</h5>
+    <a href="{% url 'task1:editblog' blogs.id %}" class="edit"> Edit</a>
+    {% endfor %}
+</div>
+{% endblock %}

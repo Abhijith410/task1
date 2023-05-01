@@ -1,30 +1,127 @@
 h1{
     text-align: center;
 }
+h3{
+    text-align: center;
+}
 div.main{
-    padding: 20px 100px;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-size: cover;  
+    overflow: auto;
+    display: inline-flex;
 }
 div.sidebar{
-    height: 400px;
-    width: 200px;
-    border: 1px solid;
-    position: fixed;
-    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 1000px;
+    overflow: auto;
+    color: white;
+    padding-bottom: 30%;
     background-color: aquamarine;
 }
-a:link{
+
+.sidebar a:link{
     text-decoration: none;
+    margin-left: 60px;
 }
 div.menu{
-    position: fixed;
-    margin-left: 300px;
-    height: 500px;
-    width: 800px;
-    border: 1px solid;
+    text-align: center;
+    margin-bottom: 50px;
+    float: right;
+    padding: 0;
+    width: 50%;
+    height: 1000px;
+    overflow: auto;
+    color: white;
     background-color: burlywood;
+    display: block
 }
 .main .menu h3{
     display: block;
     text-align: center;
     padding-top: 40px;
+}
+
+.dochome{
+    text-align: center;
+    padding: 10px;
+    margin: 40px;
+    color: black;
+}
+.addblog{
+   text-align: center; 
+   padding: 30px;
+}
+
+.addblog label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.addblog input,textarea{
+    margin: 5px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.addblog button{
+    margin: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+.addblog button:hover{
+    background-color: cornflowerblue;
+    color: black;
+}
+
+.add .row{
+    text-align: center;
+    justify-content: center;
+}
+.add .new{
+    float: right;
+}
+
+.row .card h5{
+    color: black;
+}
+
+.blogdetails{
+    margin: 30px;
+    color: black;
+}
+
+.blogdetails a{
+    float: left;
+}
+
+.blogdetails h2{
+    padding: 20px;
+    text-decoration: underline;
+}
+
+.blogdetails img{
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.blogdetails h4,h5{
+    padding: 20px;
+    text-align: center;
+    display: grid;
+}
+.blogdetails .edit{
+    float: right;
 }

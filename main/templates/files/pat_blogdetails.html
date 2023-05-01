@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home</title>
+    <link rel="stylesheet" href="{% static '/patient.css' %}">
+</head>
+<body>
+    <a href="{% url 'task1:patblog' %}" style="float: left; color: blueviolet;">Back to Blogs</a><br>
+    <div class="details">
+        {% for b in b_data %}
+        <h2>{{b.title}}</h2>
+        <h3>Prepared by: Dr {{b.doc_id.firstname}} {{b.doc_id.lastname}}</h3>
+        <img src="{{b.blogimage.url}}" alt="" height="200px" width="200px">
+        <h4>Category: {{b.category}}</h4>
+        <p>{{b.summary}}</p>
+        <p>{{b.content}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
