@@ -127,16 +127,17 @@ def Doctoraddblog(request):
 def Doctoreditblog(request,blogid):
     if 'session_id' in request.session:
         d_id = request.session['session_id']
+        blog = Blog.objects.filter(id=blogid).all()
         doc = Registration.objects.filter(id = d_id).all()
         if request.method == "POST":
-            b_title = request.POST['title']
-            b_category = request.POST['cat']
-            b_summary = request.POST['summary']
-            b_content = request.POST['content']
-            b_image = request.FILES['image']
-            Blog.objects.filter(id=blogid).update(title = b_title, category = b_category, summary = b_summary, content = b_content, blogimage = b_image)
+            b_title1 = request.POST['title1']
+            b_category1 = request.POST['cat1']
+            b_summary1 = request.POST['summary1']
+            b_content1 = request.POST['content1']
+            b_image1 = request.FILES['image1']
+            Blog.objects.filter(id=blogid).update(title = b_title1, category = b_category1, summary = b_summary1, content = b_content1, blogimage = b_image1)
             return redirect ('task1:dblog')
         else:    
-            return render(request, "files/doctor_editblog.html", {'doc_data': doc})
+            return render(request, "files/doctor_editblog.html", {'doc_data': doc, 'b_data':blog})
     else:
         return render(request, "files/login.html")     

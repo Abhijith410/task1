@@ -1,20 +1,23 @@
+<title>Edit Blog</title>
 {% extends 'files/doctor.html' %}
 {% block content %}
 <div class="addblog">
     <h3>Edit Blog Details</h3><br>
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        {% for b in b_data %}
         <label for="">Title</label><br>
-        <input type="text" value="{{task1.title}}" name="title" id="" required><br>
+        <input type="text" value="{{b.title}}" name="title1" id="" required><br>
         <label for="">Category</label><br>
-        <input type="text" value="{{task1.category}}" name="cat" id="" required><br>
+        <input type="text" value="{{b.category}}" name="cat1" id="" required><br>
         <label for="">Summary</label><br>
-        <textarea name="summary" id="" cols="30" rows="3" required>{{task1.summary}}</textarea><br>
+        <textarea name="summary1" id="" cols="30" rows="3" required>{{b.summary}}</textarea><br>
         <label for="">Content</label><br>
-        <textarea name="content" id="" cols="30" rows="6" required>{{task1.content}}</textarea><br>
+        <textarea name="content1" id="" cols="30" rows="6" required>{{b.content}}</textarea><br>
         <label for="">Image</label><br>
-        <input type="file" value="{{task1.blogimage}}" name="image" id="" required><br>
+        <input type="file" name="image1" id="" required><br>
         <button type="submit">Edit Blog</button>
+        {% endfor %}
     </form>
 </div>
 {% endblock %}
